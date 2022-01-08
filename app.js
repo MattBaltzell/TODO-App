@@ -13,6 +13,7 @@ if(localStorage.listState){
 
 submit.addEventListener('click', function(e){
     e.preventDefault()
+    if(!input.value){return}
     const html = `<div class="card">
                     <input type="checkbox" name="completed" >
                     <p>${input.value}</p>
