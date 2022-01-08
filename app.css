@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+    margin:0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem;
+    background-image: url('img/bg-image.jpg');
+    min-height:100vh;
+    box-shadow:inset 0 0 0 5000px rgba(20, 0, 30, 0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+h1{
+    font-size: 3.4rem;
+}
+
+h2{
+    font-size: 2.2rem;
+}
+
+main {
+    display:flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+form{
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    
+}
+
+input[type="text"] {
+    width: 19rem;
+    height: 2rem;
+    margin: .6rem 0 .8rem 0;
+    border: none;
+    padding:  .7em;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 8rem;
+    height: 3rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 174, 0);
+    color: #fff;
+    transition: background-color .1s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(214, 146, 0);
+}
+
+.todo__container {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255,255,255, .6);
+    border-radius: 10px;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    min-width: 32rem;
+    color: #222;
+}
+
+.cards__container {
+    margin-top: 16px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 18px;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3)
+}
+
+.card button{
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    transition: color .2s;
+}
+
+.card button:hover{
+    color: rgb(255,0,0);
+}
+
+.completed p{
+    color: #ccc;
+    text-decoration: line-through;
+}
