@@ -2,12 +2,11 @@
 *::before,
 *::after {
     margin:0;
+    box-sizing: border-box;
 }
 
 html {
-    box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
 
 body{
@@ -15,9 +14,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 3rem;
+    padding: 2rem 1rem;
     background-image: url('img/bg-image.jpg');
     min-height:100vh;
+    width: 100%;
     box-shadow:inset 0 0 0 5000px rgba(20, 0, 30, 0.4);
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,41 +25,48 @@ body{
 }
 
 h1{
-    font-size: 3.4rem;
+    font-size: 2.2rem;
 }
 
 h2{
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    text-align: center;
 }
 
 main {
     display:flex;
-    gap: 3rem;
-    margin-top: 3rem;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin-top: 2em;
+    width: 100%;
 }
 
 form{
     margin-top: 10px;
     display:flex;
     flex-direction: column;
-    align-items:flex-start;
-    
+    align-items:center;
+}
+
+label {
+    font-size: 1.3rem;
 }
 
 input[type="text"] {
-    width: 19rem;
-    height: 2rem;
-    margin: .6rem 0 .8rem 0;
+    width: 100%;
+    height: 3.4rem;
+    margin-top: .6rem;
+    margin-bottom: .8rem;
     border: none;
-    padding:  .7em;
+    padding:  .8rem;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 button[type="submit"] {
-    width: 8rem;
-    height: 3rem;
-    font-size: 16px;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 20px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -78,16 +85,16 @@ button[type="submit"]:hover {
     justify-content: space-between;
     background-color: rgba(255,255,255, .6);
     border-radius: 10px;
-    padding: 1rem 1.5rem 1.5rem 1.5rem;
-    min-width: 32rem;
+    padding: 1rem .7rem 1.5rem .7rem;
+    max-width: 100%;
     color: #222;
 }
 
 .cards__container {
-    margin-top: 16px;
+    margin-top: 1.4em;
     display:flex;
     flex-direction: column;
-    gap: 10px;
+    gap: .6rem;
 }
 
 .card {
@@ -95,12 +102,12 @@ button[type="submit"]:hover {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 8px;
+    gap: .6rem;
     background-color: #fff;
     border-radius: 5px;
     padding: 1rem;
-    font-size: 18px;
-    max-width: 100%;
+    font-size: 1.2rem;
+    width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3)
 }
 
@@ -119,4 +126,123 @@ button[type="submit"]:hover {
 .completed p{
     color: #ccc;
     text-decoration: line-through;
+}
+
+
+/* Small Tablets */
+@media screen and (min-width: 600px) {
+    
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    form{
+        align-self: center;
+        min-width: 24rem;
+    }
+
+    input[type="text"]{
+        font-size: 1.3rem;
+    }
+
+    .todo__container{
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+    }
+
+    .card {
+        font-size: 1.4rem;
+        gap: 1rem;
+    }
+}
+
+
+
+/* Large Tablets */
+@media screen and (min-width: 900px) {
+    
+    h1{
+        font-size: 3.4rem;
+    }
+
+    h2{
+        font-size: 2.4rem;
+    }
+
+    main {
+        align-items: center;
+    }
+
+    form{
+        align-self: center;
+        min-width: 24rem;
+    }
+
+    input[type="text"]{
+        font-size: 1.6rem;
+    }
+
+    .todo__container{
+        min-width: 44rem;
+    }
+
+    .cards__container {
+        margin-top: 2em;
+    }
+
+    .card {
+        font-size: 1.8rem;
+    }
+}
+
+/* Large Screens */
+@media screen and (min-width: 1200px) {
+   
+    h1{
+        font-size: 3.4rem;
+    }
+
+    h2{
+        font-size: 2.2rem;
+        text-align: left;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3em;
+    }
+
+    form{
+        align-self: unset;
+        min-width: 24rem;
+        align-items: flex-start;
+    }
+
+    input[type="text"]{
+        font-size: 1.4rem;
+    }
+
+    button[type="submit"]{
+        width:unset;
+        min-width: 10rem;
+        font-size: 1.4rem;
+    }
+
+    .todo__container{
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+        min-width: 40rem;
+    }
+
+    .cards__container {
+        margin-top: 2em;
+    }
+
+    .card {
+        font-size: 1.4rem;
+        
+    }
 }
